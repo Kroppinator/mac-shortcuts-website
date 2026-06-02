@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.toggle-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.toggle-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: 2px solid #2c3e50;
+    background: white;
+    color: #2c3e50;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #2c3e50;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.toggle-btn.active {
+    background: #2c3e50;
+    color: white;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+.view {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.commands-grid,
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.category {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.category:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+.category h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.command-list,
+.shortcut-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.command,
+.shortcut {
+    padding: 12px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.command:hover,
+.shortcut:hover {
+    background: #ecf0f1;
+    border-left-color: #2980b9;
+}
+
+code {
+    display: block;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    word-break: break-word;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+code:hover {
+    background: #1a252f;
+    color: #fff;
+}
+
+.command p,
+.shortcut p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+kbd {
+    display: inline-block;
+    background: #2c3e50;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 4px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.shortcut {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.shortcut p {
+    flex: 1;
+}
+
+.shortcut kbd {
+    margin-right: 0;
+    min-width: fit-content;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .commands-grid,
+    .shortcuts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toggle-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .category {
+        padding: 20px;
+    }
+
+    .category h2 {
+        font-size: 1.3rem;
+    }
+
+    .shortcut {
+        flex-wrap: wrap;
+    }
+
+    kbd {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+    }
+}

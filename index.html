@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Terminal Commands & Keyboard Shortcuts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mac Quick Reference</h1>
+            <p>Terminal commands and keyboard shortcuts for Mac newcomers</p>
+        </header>
+
+        <div class="toggle-container">
+            <button class="toggle-btn active" data-view="commands">Terminal Commands</button>
+            <button class="toggle-btn" data-view="shortcuts">Keyboard Shortcuts</button>
+        </div>
+
+        <!-- Terminal Commands View -->
+        <main id="commands-view" class="view active">
+            <div class="commands-grid">
+                <section class="category">
+                    <h2>Navigation & Files</h2>
+                    <div class="command-list">
+                        <div class="command">
+                            <code>pwd</code>
+                            <p>Print working directory - shows your current folder path</p>
+                        </div>
+                        <div class="command">
+                            <code>cd [path]</code>
+                            <p>Change directory - navigate to a different folder</p>
+                        </div>
+                        <div class="command">
+                            <code>ls</code>
+                            <p>List files and folders in the current directory</p>
+                        </div>
+                        <div class="command">
+                            <code>ls -la</code>
+                            <p>List all files including hidden ones with details</p>
+                        </div>
+                        <div class="command">
+                            <code>mkdir [name]</code>
+                            <p>Create a new directory (folder)</p>
+                        </div>
+                        <div class="command">
+                            <code>cd ..</code>
+                            <p>Go up one directory level to the parent folder</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>File Management</h2>
+                    <div class="command-list">
+                        <div class="command">
+                            <code>cp [source] [destination]</code>
+                            <p>Copy a file or directory</p>
+                        </div>
+                        <div class="command">
+                            <code>mv [source] [destination]</code>
+                            <p>Move or rename a file or directory</p>
+                        </div>
+                        <div class="command">
+                            <code>rm [file]</code>
+                            <p>Delete a file (be careful - no recovery!)</p>
+                        </div>
+                        <div class="command">
+                            <code>rm -r [directory]</code>
+                            <p>Delete a directory and all its contents</p>
+                        </div>
+                        <div class="command">
+                            <code>touch [filename]</code>
+                            <p>Create an empty file</p>
+                        </div>
+                        <div class="command">
+                            <code>cat [file]</code>
+                            <p>Display the contents of a file</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>Text & Search</h2>
+                    <div class="command-list">
+                        <div class="command">
+                            <code>grep [text] [file]</code>
+                            <p>Search for text within a file</p>
+                        </div>
+                        <div class="command">
+                            <code>find [path] -name [name]</code>
+                            <p>Search for files by name in a directory</p>
+                        </div>
+                        <div class="command">
+                            <code>sed -i '' 's/[old]/[new]/g' [file]</code>
+                            <p>Replace text in a file</p>
+                        </div>
+                        <div class="command">
+                            <code>nano [file]</code>
+                            <p>Open a simple text editor to edit a file</p>
+                        </div>
+                        <div class="command">
+                            <code>wc -l [file]</code>
+                            <p>Count the number of lines in a file</p>
+                        </div>
+                        <div class="command">
+                            <code>sort [file]</code>
+                            <p>Sort lines in a file alphabetically</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>System Information</h2>
+                    <div class="command-list">
+                        <div class="command">
+                            <code>whoami</code>
+                            <p>Display the current user account name</p>
+                        </div>
+                        <div class="command">
+                            <code>date</code>
+                            <p>Show the current date and time</p>
+                        </div>
+                        <div class="command">
+                            <code>df -h</code>
+                            <p>Show disk space usage in human-readable format</p>
+                        </div>
+                        <div class="command">
+                            <code>du -sh [path]</code>
+                            <p>Calculate the size of a directory or file</p>
+                        </div>
+                        <div class="command">
+                            <code>top</code>
+                            <p>Display running processes and system usage</p>
+                        </div>
+                        <div class="command">
+                            <code>uname -a</code>
+                            <p>Show system information (OS type, kernel version)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>Permissions & Ownership</h2>
+                    <div class="command-list">
+                        <div class="command">
+                            <code>chmod [permissions] [file]</code>
+                            <p>Change file permissions (who can read/write/execute)</p>
+                        </div>
+                        <div class="command">
+                            <code>chown [user] [file]</code>
+                            <p>Change file ownership</p>
+                        </div>
+                        <div class="command">
+                            <code>sudo [command]</code>
+                            <p>Run a command with administrator privileges</p>
+                        </div>
+                        <div class="command">
+                            <code>ls -l [file]</code>
+                            <p>View file permissions and ownership details</p>
+                        </div>
+                        <div class="command">
+                            <code>chmod +x [file]</code>
+                            <p>Make a file executable</p>
+                        </div>
+                        <div class="command">
+                            <code>chmod -x [file]</code>
+                            <p>Remove execute permission from a file</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Keyboard Shortcuts View -->
+        <main id="shortcuts-view" class="view">
+            <div class="shortcuts-grid">
+                <section class="category">
+                    <h2>Window & App Management</h2>
+                    <div class="shortcut-list">
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Tab</kbd>
+                            <p>Switch between open applications</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>~</kbd>
+                            <p>Switch between windows of the same app</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>M</kbd>
+                            <p>Minimize the current window</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>W</kbd>
+                            <p>Close the current window</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Q</kbd>
+                            <p>Quit the current application</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>H</kbd>
+                            <p>Hide the current application</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>Text Editing</h2>
+                    <div class="shortcut-list">
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Z</kbd>
+                            <p>Undo the last action</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Shift</kbd><kbd>Z</kbd>
+                            <p>Redo the last action</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>C</kbd>
+                            <p>Copy selected text or item</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>X</kbd>
+                            <p>Cut selected text or item</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>V</kbd>
+                            <p>Paste from clipboard</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>A</kbd>
+                            <p>Select all content</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>Search & Find</h2>
+                    <div class="shortcut-list">
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>F</kbd>
+                            <p>Open find dialog to search in document</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>G</kbd>
+                            <p>Find the next occurrence of the search term</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd>
+                            <p>Find the previous occurrence of the search term</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Space</kbd><kbd>⌘</kbd>
+                            <p>Open Spotlight search to find files and apps</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>,</kbd>
+                            <p>Open preferences or settings</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Option</kbd><kbd>Esc</kbd>
+                            <p>Force quit an application</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>File & Finder</h2>
+                    <div class="shortcut-list">
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>N</kbd>
+                            <p>Open a new window or document</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>O</kbd>
+                            <p>Open a file</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>S</kbd>
+                            <p>Save the current document</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Shift</kbd><kbd>S</kbd>
+                            <p>Save as (choose location and name)</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Delete</kbd>
+                            <p>Move item to Trash (in Finder)</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Option</kbd><kbd>Delete</kbd>
+                            <p>Empty Trash (permanently delete items)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category">
+                    <h2>Browser Navigation</h2>
+                    <div class="shortcut-list">
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>T</kbd>
+                            <p>Open a new browser tab</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>N</kbd>
+                            <p>Open a new browser window</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>W</kbd>
+                            <p>Close current tab</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Shift</kbd><kbd>W</kbd>
+                            <p>Close current window</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Option</kbd><kbd>→</kbd>
+                            <p>Go to next open tab</p>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>⌘</kbd><kbd>Option</kbd><kbd>←</kbd>
+                            <p>Go to previous open tab</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>💡 Tip: Copy any terminal command to use in your Terminal app. Learn more at <a href="https://support.apple.com/en-us/HT201236" target="_blank">Apple Support</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
